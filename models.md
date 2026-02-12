@@ -4,6 +4,8 @@ You will use open-weights LLMs that you can download for free. For general-purpo
 
 https://ollama.com/search
 
+I like gemma3:27b for general purpose inference because it's articulate and expressive, like Claude. But any popular model will work well.
+
 For coding, some LLMs are better than others. Feel free to try different models, but right now (early 2026) these are good places to start:
 
 - qwen3-coder-next
