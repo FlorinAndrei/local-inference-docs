@@ -34,6 +34,8 @@ That's a context size of 198k, memory usage of 41 GB, split between VRAM and sys
 
 Ollama will try to load as much as possible in VRAM. The parts that don't fit are offloaded to system RAM. MoE LLMs are fine this way, up to a point.
 
+Unified RAM is all the same. The model either fits in RAM, or doesn't. There's no "CPU offloading".
+
 ## Setting a Context Window Size in Ollama
 
 To run models with plenty of tools, you want the biggest context window you can get. In the Ollama models repo https://ollama.com/search click the name of the model and see the Context column - that's the biggest context size possible for that model. The Size column is the size of model files.
@@ -88,6 +90,6 @@ rm Modelfile
 
 Now run `ollama ls` and you will see the new definitions listed there, along with the base models. Load the models from the new definitions to force the context size you want.
 
-If the models don't fit in VRAM, then running them at a high speed with a large context size may not be possible, especially if they are dense LLMs.
+If the models don't fit in VRAM, then running them at a high speed with a large context size may not be possible, especially if they are dense LLMs. MoE LLMs may do well when partially offloaded to system RAM.
 
 TODO: Explain temperature and other parameters.
