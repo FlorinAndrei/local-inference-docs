@@ -59,7 +59,7 @@ Both dense LLMs and MoE LLMs work well.
 
 A PC with an RTX 3090 / 4090 / 5090 desktop GPU. They have, respectively, 24 / 24 / 32 GB of VRAM. It's pointless to even try lesser GPUs. You can find second-hand RTX 3090 GPUs out there, they work very well.
 
-These are faster than a MacBook Pro, but only if the model fits in VRAM, which can be tricky. Large MoE LLMs will get their active shard loaded in VRAM, with the rest sitting in system RAM. This works well up to a point, and then it gets quite slow.
+These are faster than a MacBook Pro, but only if the model fits in VRAM, which can be tricky. Large MoE LLMs will get their active shard loaded in VRAM, with the rest sitting in system RAM. This works well up to a point; if the active shard is too big, it will get quite slow.
 
 ### Dedicated Inference Machine
 
@@ -69,7 +69,7 @@ Here are some options, the most desirable are shown first:
 
 #### miniPC With AMD Max+ 395
 
-Unified memory, decent GPU, okay bandwidth. Get all the RAM you can, ideally 128 GB. Run Linux.
+Unified memory, decent GPU, okay bandwidth. Low power draw. Get all the RAM you can, ideally 128 GB. Run Linux.
 
 #### Mac Mini or Mac Studio
 
@@ -79,7 +79,7 @@ They are expensive if brand new. Look for second-hand options.
 
 #### NVIDIA DGX Spark
 
-128 GB of unified memory, 273 GB/sec memory bandwidth, RTX 5070 equivalent, 20 ARM cores, runs Ubuntu. It's a Blackwell development machine with CUDA, so it's expensive. But it will run inference about as well as an AMD 395.
+128 GB of unified memory, 273 GB/sec memory bandwidth, RTX 5070 equivalent, 20 ARM cores, runs Ubuntu. Low power draw. It's a Blackwell development machine with CUDA, so it's expensive. But it will run inference about as well as an AMD 395.
 
 #### PC with an NVIDIA RTX PRO 6000 GPU
 
