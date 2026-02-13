@@ -71,7 +71,7 @@ Here are some options, the most desirable are shown first:
 
 #### miniPC With AMD Max+ 395
 
-Unified memory, decent GPU, 256 GB/sec memory bandwidth (not huge, but okay). Low power draw. Get all the RAM you can, ideally 128 GB. Run Linux. MoE LLMs will run well at any size. The largest dense LLMs will be slow.
+Unified memory, decent GPU, 256 GB/sec memory bandwidth (not huge, but okay). Low power draw. Get all the RAM you can, ideally 128 GB. Runs Linux. MoE LLMs will run well at any size. The largest dense LLMs will be slow.
 
 #### Mac Mini or Mac Studio
 
