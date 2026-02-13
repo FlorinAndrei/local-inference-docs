@@ -10,7 +10,7 @@ https://opencode.ai/
 
 The main configuration file is `~/.config/opencode/opencode.json`. Declare your Ollama endpoints in it, along with the models you want to use from each:
 
-```
+```json
 {
   "$schema": "https://opencode.ai/config.json",
   "provider": {
@@ -48,7 +48,7 @@ At the **repository level**, OpenCode supports both the `AGENTS.md` and the `CLA
 
 In terms of **repository rules**, OpenCode does not look for memory files in `.claude/rules`, but it does have `.opencode/rules`. The formats are similar but not identical. You could try to symlink the latter to the former, and then enable the OpenCode rules plugin in the main config file and see what happens:
 
-```
+```json
 {
   "plugin": ["opencode-rules@latest"],
 }
@@ -74,7 +74,7 @@ TODO: Test this part with complex skills, see which fields fail.
 
 If you run MCPs from Docker Desktop, OpenCode is a supported client, so enable it in Docker Desktop. The following config block will then appear in `~/.config/opencode/opencode.json`:
 
-```
+```json
 {
   "mcp": {
     "MCP_DOCKER": {
@@ -102,7 +102,7 @@ Run it wherever you like: on your daily driver machine, on a dedicated inference
 
 It's best to run it in Docker. Create an executable script called `~/bin/update-open-webui.sh` like this:
 
-```
+```bash
 #!/usr/bin/env bash
 
 docker stop open-webui

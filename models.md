@@ -30,7 +30,7 @@ On Linux, it's best to run it in Docker:
 
 Create an executable script called `~/bin/update-ollama.sh` like this:
 
-```
+```bash
 #!/usr/bin/env bash
 
 docker stop ollama
@@ -53,7 +53,7 @@ Run this script once a week, it will update and re-launch Ollama. The container 
 
 Ollama runs in a container. To be able to invoke the `ollama` command as usual from the host, put this in `~/.bash_aliases`:
 
-```
+```bash
 ollama() {
     if [ -t 0 ]; then
 	# this is a terminal, allocate a pseudo-TTY
@@ -67,7 +67,7 @@ ollama() {
 
 To download / update models, something like this sequence works well on macOS, Linux, and Windows:
 
-```
+```bash
 ollama pull glm-4.7-flash:latest
 ollama pull gpt-oss:20b
 ollama pull gpt-oss:120b

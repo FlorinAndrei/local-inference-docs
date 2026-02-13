@@ -16,7 +16,7 @@ Models have a maximum context window size, but they could run with smaller windo
 
 While a model is running in Ollama, you can check its parameters like this:
 
-```
+```console
 $ ollama ps
 NAME           ID              SIZE     PROCESSOR    CONTEXT    UNTIL              
 gpt-oss:20b    17052f91a42e    14 GB    100% GPU     32768      4 minutes from now
@@ -24,7 +24,7 @@ gpt-oss:20b    17052f91a42e    14 GB    100% GPU     32768      4 minutes from n
 
 That's a context size of 32k, uses 14 GB of memory, and it runs entirely in VRAM.
 
-```
+```console
 $ ollama ps
 NAME                         ID              SIZE     PROCESSOR          CONTEXT    UNTIL              
 glm-4.7-flash-198k:latest    193f897bc5e4    41 GB    41%/59% CPU/GPU    202752     4 minutes from now
@@ -46,7 +46,7 @@ If Ollama is running in Docker, you may have to run `docker exec -it ollama /bin
 
 glm-4.7-flash, 198k context:
 
-```
+```bash
 cat > Modelfile <<EOF
 FROM glm-4.7-flash:latest
 PARAMETER num_ctx 202752
@@ -57,7 +57,7 @@ rm Modelfile
 
 gpt-oss-20b, 128k context:
 
-```
+```bash
 cat > Modelfile <<EOF
 FROM gpt-oss:20b
 PARAMETER num_ctx 131072
@@ -68,7 +68,7 @@ rm Modelfile
 
 gpt-oss-120b, 128k context:
 
-```
+```bash
 cat > Modelfile <<EOF
 FROM gpt-oss:120b
 PARAMETER num_ctx 131072
@@ -79,7 +79,7 @@ rm Modelfile
 
 qwen3-coder-next, 256k context:
 
-```
+```bash
 cat > Modelfile <<EOF
 FROM qwen3-coder-next:latest
 PARAMETER num_ctx 262144
