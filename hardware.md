@@ -65,7 +65,7 @@ These are faster than a MacBook Pro (more bandwidth), but only if the model fits
 
 ### Dedicated Inference Machine
 
-Lots and lots of fast VRAM / unified RAM. At 96 GB you can do a lot, but ideally you should aim for 128 GB. If your MacBook Pro has this much unified RAM, then it graduates into this category.
+Lots and lots of fast VRAM / unified RAM. At 96 GB you can do a lot, but ideally you should aim for 128 GB. If your MacBook Pro has this much unified RAM, then it graduates into this category (but make sure your model has enough bandwidth, otherwise all that RAM is wasted).
 
 Here are some options, the most desirable are shown first:
 
