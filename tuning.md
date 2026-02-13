@@ -40,7 +40,9 @@ Unified RAM is all the same. The model either fits in RAM, or doesn't. There's n
 
 To run models with plenty of tools, you want the biggest context window you can get. In the Ollama models repo https://ollama.com/search click the name of the model and see the Context column - that's the biggest context size possible for that model. The Size column is the size of model files.
 
-You can create new model definitions in Ollama, with fixed context sizes, and they will run at the context size you declare, no matter what. This does not duplicate the model weights files (you still need the base model), just creates a new definition. Here are some examples that force the maximum size for coding models.
+If your system has a lot of RAM / VRAM, Ollama will run the model with the maximum context size automatically.
+
+Otherwise, you can create new model definitions in Ollama, with fixed context sizes, and they will run at the context size you declare, regardless of the rules that Ollama has. This does not duplicate the model weights files (you still need the base model), just creates a new definition. Here are some examples that force the maximum size for coding models.
 
 If Ollama is running in Docker, you may have to run `docker exec -it ollama /bin/bash` first, and then create the definitions (`Modelfile` is a file path, Ollama can't see it if it's not in the container):
 
