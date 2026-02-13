@@ -51,7 +51,7 @@ docker run -d --restart always \
 
 Run this script once a week, it will update and re-launch Ollama. The container is persistent across reboots.
 
-Ollama runs in a container. To be able to invoke the `ollama` command as usual from the host, put this in `~/.bash_aliases`:
+If Ollama runs in a container, then to be able to invoke the `ollama` command as usual from the host, put this in `~/.bash_aliases`:
 
 ```bash
 ollama() {
