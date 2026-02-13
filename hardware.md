@@ -55,7 +55,7 @@ There are three main kinds of machines that could run inference.
 
 MacBook Pro with at least 36 GB of unified RAM. If you have less than 36 GB, you will have to turn off apps to run inference. This is a bare minimum.
 
-Both dense LLMs and MoE LLMs work well (because they will be small).
+Both dense LLMs and MoE LLMs are fast enough (because they will be small).
 
 ### Daily Driver, NVIDIA GPU
 
