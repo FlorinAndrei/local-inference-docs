@@ -71,17 +71,19 @@ Here are some options, the most desirable are shown first:
 
 #### miniPC With AMD Max+ 395
 
-Unified memory, decent GPU, 256 GB/sec memory bandwidth (not huge, but okay). Low power draw. Get all the RAM you can, ideally 128 GB. Run Linux.
+Unified memory, decent GPU, 256 GB/sec memory bandwidth (not huge, but okay). Low power draw. Get all the RAM you can, ideally 128 GB. Run Linux. MoE LLMs will run well at any size. The largest dense LLMs will be slow.
 
 #### Mac Mini or Mac Studio
 
-Unified memory, okay GPU. Get all the RAM you can, ideally 128 GB. A Mac mini with M4 Pro has 273 GB/sec memory bandwidth. A Mac Studio may have excellent memory bandwidth (819 GB/sec for an M3 Ultra), and this is the only combo that fully embraces the definition: "a large amount of fast RAM, with a mediocre GPU chip plugged into it".
+Unified memory, okay GPU. Get all the RAM you can, ideally 128 GB. A Mac mini with M4 Pro has 273 GB/sec memory bandwidth. MoE LLMs will run well at any size. The largest dense LLMs will be slow.
+
+A Mac Studio may have excellent memory bandwidth (819 GB/sec for an M3 Ultra), and this is the only combo that fully embraces the definition: "a large amount of fast RAM, with a mediocre GPU chip plugged into it". Either MoE or dense LLMs will run just fine at any size.
 
 But Macs are expensive. Look for second-hand options.
 
 #### NVIDIA DGX Spark
 
-128 GB of unified memory, 273 GB/sec memory bandwidth, RTX 5070 equivalent, 20 ARM cores, runs Ubuntu. Low power draw. It's a Blackwell development machine with CUDA, so it's expensive. But it will run inference about as well as an AMD 395.
+128 GB of unified memory, 273 GB/sec memory bandwidth, RTX 5070 equivalent, 20 ARM cores, runs Ubuntu. Low power draw. It's a Blackwell development machine with CUDA, so it's expensive. But it will run inference about as well as an AMD 395. MoE LLMs will run well at any size. The largest dense LLMs will be slow.
 
 #### PC with an NVIDIA RTX PRO 6000 GPU
 
