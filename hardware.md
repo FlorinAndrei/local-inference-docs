@@ -59,7 +59,7 @@ Both dense LLMs and MoE LLMs work well.
 
 ### Daily Driver, NVIDIA GPU
 
-A PC with an RTX 3090 / 4090 / 5090 desktop GPU. They have, respectively, 24 / 24 / 32 GB of VRAM. It's pointless to even try lesser GPUs. You can find second-hand RTX 3090 GPUs out there, they work very well.
+A PC with an RTX 3090 / 4090 / 5090 desktop GPU. They have, respectively, 24 / 24 / 32 GB of VRAM. It's pointless to even try lesser GPUs, they don't have enough VRAM. You can find second-hand RTX 3090 GPUs out there, they work very well.
 
 These are faster than a MacBook Pro, but only if the model fits in VRAM, which can be tricky. Large MoE LLMs will get their active shard loaded in VRAM, with the rest sitting in system RAM. This works well up to a point; if the active shard is too big, it will get quite slow.
 
