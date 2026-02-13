@@ -36,7 +36,7 @@ The main configuration file is `~/.config/opencode/opencode.json`. Declare your 
 
 `localhost` is a daily-driver machine, a PC with an RTX 3090, 24 GB of VRAM, so it can only run the smallest coding models. Ollama will not load models with a large context, so you have to force the context size with a custom definition.
 
-`spark` is a dedicated inference machine with 128 GB of unified RAM, so it can run fairly big open-weights coding models; because it has so much RAM, Ollama loads all models with the context window maxed out, so you don't need to create new definitions, just use the base models.
+`spark` is a dedicated inference machine with 128 GB of unified RAM, so it can run fairly big open-weights coding models. Because the machine has so much RAM, Ollama loads all models with the context window maxed out, so you don't need to create new definitions, just use the base models.
 
 ### Make OpenCode More Like Claude Code
 
