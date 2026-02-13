@@ -35,9 +35,7 @@ What matters most for inference performance, in terms of hardware? These are the
 
 Inference speed is measured in tokens / second. More is better. For inference, the bottleneck is (V)RAM bandwidth. If you use dense LLMs, inference speed is completely predictable, the formula is:
 
-```
-speed = memory bandwidth / model size in memory
-```
+$$\text{speed} = \frac{\text{memory bandwidth}}{\text{model size in memory}}$$
 
 E.g. if your memory bandwidth is 273 GB/sec, and the dense LLM uses 21 GB of memory, then you get 13 tokens / second. That means the whole LLM is "slurped" once for each token.
 
