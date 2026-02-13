@@ -75,7 +75,7 @@ Unified memory, decent GPU, 256 GB/sec memory bandwidth (not huge, but okay). Lo
 
 #### Mac Mini or Mac Studio
 
-Unified memory, okay GPU. Get all the RAM you can, ideally 128 GB. A Mac Studio may have excellent memory bandwidth, and this the only combo that fully embraces the definition: "a large amount of fast RAM, with a mediocre GPU chip plugged into it".
+Unified memory, okay GPU. Get all the RAM you can, ideally 128 GB. A Mac mini with M4 Pro has 273 GB/sec memory bandwidth. A Mac Studio may have excellent memory bandwidth (819 GB/sec for an M3 Ultra), and this the only combo that fully embraces the definition: "a large amount of fast RAM, with a mediocre GPU chip plugged into it".
 
 But Macs are expensive. Look for second-hand options.
 
