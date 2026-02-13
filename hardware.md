@@ -45,7 +45,7 @@ Compute power is least important because inference is bandwidth-intensive, not c
 
 ### Quality
 
-Bigger models tend to be smarter. This is why you needs a lot of RAM. There are some very big open-weights models out there. The only limit is your bank account.
+Bigger models tend to be smarter. This is why you need a lot of RAM. There are some very big open-weights models out there. The only limit is your bank account.
 
 ## Machines for Inference
 
