@@ -7,7 +7,7 @@ If you ever run out of tokens with the frontier models, and are looking for "fre
 Assumptions:
 
 - Your daily driver system is something like a MacBook Pro or similar (typical for coders), or a fairly powerful gaming laptop or PC. You may or may not have extra hardware available.
-- You're a coder, although anybody who wishes to do local inference will find most information here useful (except for some coding-specific client apps).
+- You're a coder, although anybody who wishes to do local inference will find most information here useful (skip the coding-specific client apps).
 
 It's not an easy thing to do well.
 

@@ -34,17 +34,19 @@ The main configuration file is `~/.config/opencode/opencode.json`. Declare your 
 }
 ```
 
-`localhost` is a daily-driver machine, a PC with an RTX 3090, so it can only run the smallest coding models. `spark` is a dedicated inference machine with 128 GB of unified RAM, so it can run fairly big open-weights coding models.
+`localhost` is a daily-driver machine, a PC with an RTX 3090, 24 GB of VRAM, so it can only run the smallest coding models. Ollama will not load models with a large context, so you have to force the context size with a custom definition.
+
+`spark` is a dedicated inference machine with 128 GB of unified RAM, so it can run fairly big open-weights coding models; because it has so much RAM, Ollama loads all models with the context window maxed out, so you don't need to create new definitions, just use the base models.
 
 ### Make OpenCode More Like Claude Code
 
-You use Claude Code already. OpenCode is the backup. You want to make sure OpenCode uses as much as possible from the Claude Code tools.
+You use Claude Code already. OpenCode is the backup. You want to make sure OpenCode uses as much as possible from the Claude Code tools. Here's a recipe:
 
 #### Memory Files
 
-At the **repository level**, OpenCode supports both `AGENTS.md` and `CLAUDE.md`. It's a good idea to create `CLAUDE.md` for Claude, and then create `AGENTS.md` as a symlink to it for all other agents. OpenCode will use whichever it finds first.
+At the **repository level**, OpenCode supports both the `AGENTS.md` and the `CLAUDE.md` memory files. It's a good idea to create `CLAUDE.md` for Claude, and then create `AGENTS.md` as a symlink to it for all other agents. OpenCode will use whichever it finds first.
 
-In terms of **repository rules**, OpenCode does not look for `.claude/rules`, but it does have `.opencode/rules`. The formats are similar but not identical. You could try to symlink the latter to the former, and then enable the OpenCode rules plugin in the main config file and see what happens:
+In terms of **repository rules**, OpenCode does not look for memory files in `.claude/rules`, but it does have `.opencode/rules`. The formats are similar but not identical. You could try to symlink the latter to the former, and then enable the OpenCode rules plugin in the main config file and see what happens:
 
 ```
 {
@@ -52,7 +54,7 @@ In terms of **repository rules**, OpenCode does not look for `.claude/rules`, bu
 }
 ```
 
-At the **user level**, Claude uses `~/.claude/CLAUDE.md`, while OpenCode uses `~/.config/opencode/AGENTS.md`. However, if the latter does not exist, OpenCode will read the former. You could symlink them, just in case.
+At the **user level**, Claude uses `~/.claude/CLAUDE.md`, while OpenCode uses `~/.config/opencode/AGENTS.md` memories. However, if the latter does not exist, OpenCode will read the former. You could symlink them, just in case.
 
 TODO: Test this part with complex rules.
 

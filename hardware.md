@@ -1,6 +1,10 @@
 # Hardware
 
-The hardware requirements for inference are substantial.
+The requirements can be summarized in one phrase:
+
+You need a large amount of fast RAM, with a mediocre GPU chip plugged into it.
+
+That's it. Now here are some specific details.
 
 ## Memory: System RAM vs VRAM vs Unified RAM
 
@@ -43,7 +47,7 @@ Compute power is least important because inference is bandwidth-intensive, not c
 
 ### Quality
 
-Bigger models tend to work better. This is why you needs a lot of RAM. There are some very big open-weights models out there. The only limit is your bank account.
+Bigger models tend to be smarter. This is why you needs a lot of RAM. There are some very big open-weights models out there. The only limit is your bank account.
 
 ## Machines for Inference
 
@@ -69,7 +73,7 @@ Here are some options, the most desirable are shown first:
 
 #### miniPC With AMD Max+ 395
 
-Unified memory, decent GPU, okay bandwidth. Low power draw. Get all the RAM you can, ideally 128 GB. Run Linux.
+Unified memory, decent GPU, 256 GB/sec memory bandwidth (not huge, but okay). Low power draw. Get all the RAM you can, ideally 128 GB. Run Linux.
 
 #### Mac Mini or Mac Studio
 
@@ -83,4 +87,4 @@ They are expensive if brand new. Look for second-hand options.
 
 #### PC with an NVIDIA RTX PRO 6000 GPU
 
-96 GB of VRAM. 1.8 TB/sec of memory bandwidth. Fastest option. Very expensive.
+96 GB of VRAM. 1.8 TB/sec of memory bandwidth. Fastest option (it's not the GPU chip, it's the bandwidth). Very expensive.
