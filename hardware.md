@@ -37,7 +37,7 @@ Inference speed is measured in tokens / second. More is better. For inference, t
 
 $$\text{speed} = \frac{\text{memory bandwidth}}{\text{model size in memory}}$$
 
-E.g. if your memory bandwidth is 273 GB/sec, and the dense LLM uses 21 GB of memory, then you get 13 tokens / second. That means the whole LLM is "slurped" once for each token.
+E.g. if your memory bandwidth is 273 GB/sec, and the dense LLM uses 21 GB of memory, then you get 13 tokens / second. That means the whole LLM is "slurped" once by the GPU for each token.
 
 If you use MoE LLMs (mixture-of-experts), the formula is the same, but only a shard of the model is active at any time, and its size is model-dependent and tricky to figure out (you can reverse-engineer the shard size if you know your RAM bandwidth and you measure the speed).
 
