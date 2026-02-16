@@ -22,7 +22,7 @@ Installation is very simple. They maintain a library of good models in the GGUF 
 
 On macOS and Windows, just install the Ollama app.
 
-On Linux, it's best to run it in Docker:
+On Linux (the commands shown below assume Ubuntu 24.04, but many distributions will be similar), it's best to run it in Docker:
 
 - install the NVIDIA drivers (test with `nvidia-smi`)
 - install Docker Engine https://docs.docker.com/engine/install/
@@ -51,18 +51,25 @@ docker run -d --restart always \
 
 Run this script once a week, it will update and re-launch Ollama. The container is persistent across reboots.
 
-If Ollama runs in a container, then to be able to invoke the `ollama` command as usual from the host, put this in `~/.bash_aliases`:
+If Ollama runs in a container, then to be able to invoke the `ollama` command as usual from the host, put this in `~/bin/ollama` and make it executable:
 
 ```bash
-ollama() {
-    if [ -t 0 ]; then
-	# this is a terminal, allocate a pseudo-TTY
-        docker exec -it ollama ollama "$@"
-    else
-	# this is not a terminal, do not allocate a pseudo-TTY
-        docker exec -i ollama ollama "$@"
-    fi
-}
+#!/usr/bin/env bash
+
+if [ -t 0 ]; then
+  # this is a terminal, allocate a pseudo-TTY
+  docker exec -it ollama ollama "$@"
+else
+  # this is not a terminal, do not allocate a pseudo-TTY
+  docker exec -i ollama ollama "$@"
+fi
+```
+
+Then at the very top of `~/.bashrc` (before the `case` statement) export the new PATH:
+
+```bash
+# Make ~/bin available for non-interactive shells (e.g. SSH commands)
+export PATH="$HOME/bin:$PATH"
 ```
 
 To download / update models, something like this sequence works well on macOS, Linux, and Windows:
